@@ -1,0 +1,670 @@
+html {
+	/* pour le footer */
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+	background-color: #222222;
+	color: #eeeeee;
+}
+
+article {
+	border: 1px solid #444444;
+	border-radius: 4px;
+	margin: 14px 0px;
+	padding-bottom: 8px;
+}
+
+li {
+	margin: 0 !important;
+}
+
+.thumbnail img{
+	max-height:50px;
+	}
+@media (min-width: 480px){
+	.thumbnail img{
+		max-height:90px;
+		}
+	}
+@media (min-width: 768px){
+	.thumbnail img{
+		max-height:135px;
+		}
+	}
+
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.page{
+	margin-top: 20%;
+	/* pour le footer */
+	padding-bottom: 40px;
+}
+
+	@media (min-width: 992px){
+		.page {
+			/*margin-top: 80px;*/
+			margin-top: 8%;
+		}
+	}
+
+.form-inline input{
+	display: inline-block;
+	max-width: 60%;
+}
+
+.navbar {
+	background-color: #104080;
+	color: #babafa;
+}
+
+.navbar-form {
+	margin-right: 0 !important;
+}
+
+	.navbar-inverse .navbar-brand{
+		color: #8acafa;
+	}
+		
+	.navbar-inverse .navbar-nav > li > a{
+		color: #6aaaea;
+	}
+	.navbar-inverse .navbar-nav > li > a:hover{
+		background-color: #002060;
+	}
+	
+	.navbar-inverse .navbar-nav > .active > a {
+		background-color: #002060;
+	}	
+	.navbar-inverse .navbar-nav > .active > a:hover {
+		background-color: #001050;
+	}
+
+@media (max-width:935px){
+	#BTNrecherche{
+		display: none;
+	}
+
+	.Taille-controle{
+		max-width: 60px !important;
+	}
+}
+	
+.intro {
+	background-color: #444444;
+}
+	.intro-pop {
+		margin-bottom: 5%;
+		padding: 5%;
+		border-radius: 25px;
+	}
+
+	@media (min-width: 768px){
+	.intro-pop{
+		margin-bottom: 2%;
+		padding: 2%;
+		}
+	}
+
+.accueil {
+	/*margin-top: 20px;*/
+	margin-top: 2%;
+}
+	.legende {
+		color: white;
+	}
+
+	.commentaires {
+		background-color: rgba(38, 154, 188, 1);
+	}
+	
+.rockface{
+	max-width: 100px;
+}
+
+.encre{
+	float: right;
+	color: white;
+}
+
+.quotation {
+	font-style: italic;
+	color: #1399BD;
+}
+
+.thumbnail {
+	margin-top: 2%;
+}
+
+.badge {
+	float:right;
+}
+
+#conteneur {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap; 
+}
+	@media (min-width: 992px){
+		#conteneur {
+			flex-wrap: nowrap !important;
+		}
+	}
+
+
+.element {
+	margin: 1%;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+	min-width: 240px;
+	max-width: 300px;
+}
+	.dropdown>.panel-heading::first-letter {font-size:xx-large;}
+	
+	.dropdown-content {
+		display: none;
+		position: absolute;
+		background-color: #000000;
+		min-width: 200px;
+		box-shadow: 0px 8px 16px 0px rgba(48, 48, 48);
+		padding: 12px 16px;
+		z-index: 1;
+	}
+	
+		@media (min-width: 992px){
+			.dropdown {
+			min-width: 200px;
+			max-width: 260px;
+			}
+				.dropdown-content {
+					min-width: 240px;
+				}
+		}
+	
+	.dropdown:hover .dropdown-content {
+		display: block;
+	}
+
+.decription-CW {
+	margin-bottom: 10%;
+}
+	
+.quote {
+	 text-align: justify;
+}
+	
+	.quote::first-letter {font-size:xx-large;}
+
+	.Ani {
+		animation-name: Ani;
+		animation-duration:5s;
+		animation-iteration-count: infinite;
+		animation-direction: alternate;
+		-webkit-animation-name: Ani;
+		-webkit-animation-duration:5s;
+		-webkit-animation-iteration-count: infinite;
+		-webkit-animation-direction: alternate;
+	}
+		@keyframes Ani{
+			from { color: #1399BD; }
+			to { color: #a2e282; }
+		}
+		@-webkit-keyframes Ani{
+			from { color: #1399BD; }
+			to { color: #a2e282; }
+		}
+		
+.JF-image {
+	background-image: url("images/julie-fowlis.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 270px;
+	opacity: 0.7;
+	position: relative;
+	margin-top: 5%; 
+	margin-bottom: 2%;
+	margin-left: -50px ;
+	margin-right: -50px;
+}
+
+	.JF-text {
+		position: absolute ;
+		opacity: 1;
+		color: white;
+		text-align: justify;
+		margin: 10px 50px;
+	}
+
+	@media (min-width: 480px){
+		.JF-image {
+			margin-left: -60px ;
+			margin-right: -60px;
+		}
+		.JF-text {
+			margin: 100px 100px;
+		}
+	}
+
+.TextZoo p {
+	text-align: justify;
+}
+
+.greenZoo {
+	color: #578e93;
+}
+
+.orangeZOO {
+	color: #fc964b;
+}
+
+#ZooAnim {
+	position: relative;
+	animation-name: Zoo;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+    -webkit-animation-name: Zoo; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 3s;
+    -webkit-animation-timing-function: ease-out;
+}
+
+	#ZooAnim:hover {
+		opacity:0.5;
+	}
+
+	@keyframes Zoo {
+		0% { left: -850px; }
+		100% { left: 0px; }
+	}
+
+	@-webkit-keyframes Zoo {
+		0% { left: -850px; }
+		100% { left: 0px; }
+	}
+
+.forum-reponse {
+	color: black;
+}
+
+.alert-success{
+	background-color: #dff0d8 !important;
+}
+
+.alert-warning{
+	background-color: #fcf8e3 !important;
+}
+
+.alert-danger{
+	background-color: #f2dede !important;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+	background-color: #333333 !important;
+}
+
+.table-hover > tbody > tr:hover {
+	background-color: #333333 !important;
+}
+	
+/* ANIMATION FRISES D'IMAGES (Zone Emin) */
+.fusion {
+    animation-name: fusionanim;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes fusionanim {
+    0%   {color:#ffaaaa;}
+    25%  {color:#ffffaa;}
+    50%  {color:#aaffff;}
+    75%  {color:#66ff66;}
+    100% {color:#ffaaaa;}
+}	
+#mel-scroll-container {
+	font-size:11px;
+	font-weight:bold;
+	width: 95%;
+	margin: auto;
+	overflow: hidden;
+	border-left: solid 5px #6aaaea;
+	border-right: solid 5px #6aaaea;
+	border-radius: 6px;
+	transition: width .2s ease-in-out;
+}
+
+	#mel-scroll-container:hover {
+		width: 100%;
+	}	
+	
+.mel-scroll-help {
+	position: relative; 
+	display: table-cell; 
+	vertical-align: top;
+} 
+
+.mel-scroll {
+	text-align: justify;
+	margin: 0 4px;
+	margin-bottom: auto;
+	overflow: hidden;
+	display:inline-block;
+	width: 180px;
+	height: 180px;
+	max-height: 180px;
+    position: relative;
+    animation: melanim 10s infinite;
+	animation-timing-function: linear;
+	transition: width .3s, border-radius 2s;	
+}
+	.mel-scroll:hover {
+		overflow-y: scroll;
+		margin-bottom: auto;
+		width: 200px;
+		border: 1px solid white;
+		border-radius: 6px;
+	}
+
+@media (min-width: 768px){
+	.mel-scroll {
+		text-align: justify;
+		margin: 0 4px;
+		margin-bottom: auto;
+		overflow: hidden;
+		display:inline-block;
+		width: 180px;
+		height: 180px;
+		max-height: 180px;
+		position: relative;
+		animation: melanim 6s infinite;
+		animation-timing-function: linear;
+		transition: width .3s, border-radius 2s;	
+	}
+		.mel-scroll:hover {
+		overflow-y: scroll;
+		margin-bottom: auto;
+		width: 250px;
+		border: 1px solid white;
+		border-radius: 6px;
+	}
+}
+
+	.mel-scroll > img {
+		display:block;
+		border-radius: 4px;
+		max-width: 180px;
+		padding-right: 4px;
+	}
+
+	.mel-scroll:hover > img {
+		display: none;
+	}
+
+.mel-scroll-content {
+	background-color: rgba(0, 0, 0, 1);
+	display: none;
+	min-height: 180px;
+	padding: 10px;
+	transition: background-color 1s linear; /*marche pas*/
+}
+
+	.mel-scroll:hover > .mel-scroll-content {
+		background-color: rgba(0, 0, 0, 0.7);
+		display: block;
+	}
+
+	#mel-scroll-container:hover > .mel-scroll-help > .mel-scroll {
+		animation-play-state: paused;
+	}
+
+
+	@keyframes melanim {
+		from {right: 0px;}
+		to {right: 1128px;}
+	}
+	
+	/* oui je refais une autre class completement differente pour la page celtique plutot que de réutiliser .mel-scroll, je voulais faire des keyframes dynamiques mais c'etait hyper galere :( */
+
+.celt-scroll {
+	text-align: justify;
+	margin: 0 4px;
+	margin-bottom: auto;
+	overflow: hidden;
+	display:inline-block;
+	width: 180px;
+	height: 180px;
+	max-height: 180px;
+    position: relative;
+    animation: celtanim 16s infinite;
+	animation-timing-function: linear;
+	transition: width .3s, border-radius 2s;	
+}
+
+	.celt-scroll:hover {
+		overflow-y: scroll;
+		margin-bottom: auto;
+		width: 200px;
+		border: 1px solid white;
+		border-radius: 6px;
+	}	
+
+@media (min-width: 768px){
+.celt-scroll {
+	text-align: justify;
+	margin: 0 4px;
+	margin-bottom: auto;
+	overflow: hidden;
+	display:inline-block;
+	width: 180px;
+	height: 180px;
+	max-height: 180px;
+    position: relative;
+    animation: celtanim 12s infinite;
+	animation-timing-function: linear;
+	transition: width .3s, border-radius 2s;	
+}
+
+	.celt-scroll:hover {
+		overflow-y: scroll;
+		margin-bottom: auto;
+		width: 250px;
+		border: 1px solid white;
+		border-radius: 6px;
+	}
+}
+
+
+	.celt-scroll > img {
+		display:block;
+		border-radius: 4px;
+		max-width: 180px;
+		padding-right: 4px;
+	}
+
+	.celt-scroll:hover > img {
+		display: none;
+	}
+
+	.celt-scroll:hover > .mel-scroll-content {
+		background-color: rgba(0, 0, 0, 0.7);
+		display: block;
+	}
+
+	#mel-scroll-container:hover > .mel-scroll-help > .celt-scroll {
+		animation-play-state: paused;
+	}
+
+	@keyframes celtanim {
+		from {right: 0px;}
+		to {right: 2444px;}
+	}
+	
+#mel1:hover, #mel1b:hover {
+	background: no-repeat url("images/thumbnail_jazz_fusion.png") center;
+}
+
+#mel2:hover, #mel2b:hover {
+	background: no-repeat url("images/thumbnail_bossa_nova.png") center;
+}
+
+#mel3:hover, #mel3b:hover {
+	background: no-repeat url("images/thumbnail_punk_celtique.png") center;
+}
+
+#mel4:hover, #mel4b:hover {
+	background: no-repeat url("images/thumbnail_metal_symphonique.png") center;
+}
+
+#mel5:hover, #mel5b:hover {
+	background: no-repeat url("images/thumbnail_dubstep.png") center;
+}
+
+#mel6:hover, #mel6b:hover {
+	background: no-repeat url("images/thumbnail_kawaii_metal.png") center;
+}
+
+
+#mel7:hover, #mel7b:hover { 
+	background: no-repeat url("images/thumbnail_susan-mcfadden.jpg") top; 
+}
+
+#mel8:hover, #mel8b:hover { 
+	background: no-repeat url("images/thumbnail_máiréad-carlin.jpg") top;
+}
+
+#mel9:hover, #mel9b:hover { 
+	background: no-repeat url("images/thumbnail_abha-McMahon.jpg") top;
+}
+
+#mel10:hover, #mel10b:hover { 
+	background: no-repeat url("images/thumbnail_tara-mcneill.jpg") top;
+}
+
+#mel11:hover, #mel11b:hover { 
+	background: no-repeat url("images/thumbnail_méav-ní-mhaolchatha.jpg") center;
+}
+
+#mel12:hover, #mel12b:hover { 
+	background: no-repeat url("images/thumbnail_orla-fallon.jpg") top;
+}
+
+#mel13:hover, #mel13b:hover { 
+	background: no-repeat url("images/thumbnail_lisa-kelly.jpg") top;
+}
+
+#mel14:hover, #mel14b:hover { 
+	background: no-repeat url("images/thumbnail_Mairead-Nesbitt.jpg") top;
+}
+
+#mel15:hover, #mel15b:hover { 
+	background: no-repeat url("images/thumbnail_Chloë-Agnew.jpg") top;
+}
+
+#mel16:hover, #mel16b:hover { 
+	background: no-repeat url("images/thumbnail_Hayley-Westenra.jpg") top;
+}
+
+#mel17:hover, #mel17b:hover { 
+	background: no-repeat url("images/thumbnail_alex-sharpe.jpg") top;
+}
+
+#mel18:hover, #mel18b:hover { 
+	background: no-repeat url("images/thumbnail_Lynn-hilary.jpg") top;
+}
+
+#mel19:hover, #mel19b:hover { 
+	background: no-repeat url("images/thumbnail_lisa-lambe.jpg") top;
+}
+
+#disco {
+z-index:1;
+pointer-events: none;
+position: absolute;
+margin-left:-150px;
+width:300px;
+height:300px;
+border-radius:150px;
+background-color:rgba(255,255,200,0.1);
+animation: d 10s infinite linear;
+animation-direction: alternate-reverse;
+}
+
+#disco2 {
+	z-index:1;
+	pointer-events: none;
+	position: absolute;
+	margin-left:-150px;
+	width:300px;
+	height:300px;
+	border-radius:150px;
+	background-color:rgba(255,255,200,0.1);
+	animation: d2 10s infinite linear;
+	animation-direction: alternate-reverse;
+}
+
+@keyframes d{
+	0% {left:-50%;top:2%}
+	25% {left:0%;top:12%}
+	50% {left:50%;top:15%}
+	75% {left:100%;top:12%}
+	100% {left:150%;top:2%}
+}
+
+@keyframes d2{
+	0% {left:150%;top:2%}
+	25% {left:100%;top:12%}
+	50% {left:50%;top:15%}
+	75% {left:0%;top:12%}
+	100% {left:-50%;top:2%}
+}
+@media (min-width:768px) {
+#disco {
+	z-index:1;
+	pointer-events: none;
+	position: absolute;
+	margin-left:-300px;
+	width:600px;
+	height:600px;
+	border-radius:300px;
+	background-color:rgba(255,255,200,0.1);
+	animation: d 15s infinite linear;
+	animation-direction: alternate-reverse;
+}
+
+#disco2 {
+	z-index:1;
+	pointer-events: none;
+	position: absolute;
+	margin-left:-300px;
+	width:600px;
+	height:600px;
+	border-radius:300px;
+	background-color:rgba(255,255,200,0.1);
+	animation: d2 15s infinite linear;
+	animation-direction: alternate-reverse;
+}
+	
+	@keyframes d{
+		0% {left:-100%;top:0}
+		35% {left:0%;top:5%}
+		50% {left:50%;top:15%}
+		65% {left:100%;top:5%}
+		100% {left:200%;top:0}
+	}
+
+	@keyframes d2{
+		0% {left:200%;top:0}
+		35% {left:100%;top:5%}
+		50% {left:50%;top:15%}
+		65% {left:0%;top:5%}
+		100% {left:-100%;top:0}
+	}
+}

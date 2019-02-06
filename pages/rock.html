@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>La musique ou la mort - rock</title>
+		<link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
+		<link rel="stylesheet" href="../page_de_style.css" type="text/css"/>
+	</head>
+	<body>
+		<!-- Barre de navigation -->
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+				<div class="navbar-header">
+					<!-- Menu déroulant sur petit écran -->
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<!-- Logo du site -->
+					<a class="navbar-brand" href="../index.html">
+						<strong><span class="glyphicon glyphicon-equalizer"></span> LM²</strong>
+					</a>
+				</div>
+				<!-- Contenu de la barre de navigation -->
+				<div id="navbar" class="collapse navbar-collapse">
+					<!-- Affichage des pages: liste de navigation -->
+					<ul class="nav navbar-nav">
+						<!-- Page active mise en évidence -->
+						<li>
+							<a class="fusion" href="../index.html" title="La Musique ou La Mort">Index</a>
+						</li>
+						<li>
+							<a class="fusion" href="k-pop.html" title="Les sourds précoces">K-Pop</a>
+						</li>
+						<!-- lien correspondant à la page visualisée -->
+						<li class="active">
+							<a href="#" title="je suis un homme simple">Rock</a>
+						</li>
+						<li>
+							<a class="fusion" href="classique.html" title="Un peu d'archéologie">Classique</a>
+						</li>
+						<li>
+							<a class="fusion" href="celtique.html" title="Pendant ce temps, de l'autre côté de la Manche...">Celtique</a>
+						</li>
+						<li>
+							<a class="fusion" href="jazz.html" title="Un petit coup de trompette?">Jazz</a>
+						</li>
+						<li>
+							<a class="fusion" href="melanges.html" title="Pour ceux qui n'aiment pas les étiquettes">Fusions</a>
+						</li>
+						<li>
+							<a class="fusion" href="Forum.html" title="À votre tour">Forum</a>
+						</li>
+					</ul>
+					<!-- Zone de recherche linéaire décalée sur la droite -->
+					<form class="navbar-form navbar-right form-inline">
+						<div class="form-group">
+							<!-- barre de recherche -->
+						<input type="search" class="input-sm form-control Taille-controle" placeholder="Recherche">
+						<!-- Bouton de recherche -->
+						<button type="submit" class="btn btn-info btn-sm">
+							<span class="glyphicon glyphicon-music"></span> 
+							<span id="BTNrecherche">Chercher</span>
+						</button>
+						</div>
+					</form>
+				</div>
+		</nav>
+		<!--Contenu de la page -->
+		<div class="container page">
+			<h1>
+				<center>Rock</center>
+			</h1>
+			<div class="row">
+				<div class="col-lg-10 col-lg-offset-1">
+					Le rock est un genre musical apparu dans les années 1950 aux États-Unis et qui s'est développé en différents sous-genres à partir des années 1960, notamment aux États-Unis et au Royaume-Uni. Il prend ses racines dans le rock 'n' roll des années 1940 et 1950, lui-même grandement influencé par le rhythm and blues et la country. Le rock a également incorporé des éléments provenant d'autres genres dont la folk, le blues, le jazz et la musique classique. Le terme « rock » est aujourd'hui utilisé comme un terme générique incluant des formes artistiques comme la pop music, la musique soul, et parfois même le hip-hop, auquel il est souvent opposé. Ci-dessous quelques groupes qui auront toujours une place dans nos coeurs.
+				</div>
+			</div>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<div class="row">
+				<!-- Côte à côte en lg et en md, puis tout superposé en sm et en xs. C'est d'ailleurs pour ça que tout est englobé ici, la description et la liste des membres -->
+				<div class="col-lg-5 col-lg-offset-0 col-md-6 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
+					<img class="col-lg-12 col-md-12 col-sm-12 col-xs-12" src="../images/Logo_PinkFloyd.png"/>
+					<div>
+						Pink Floyd est un des plus grands groupes de rock de toute l'histoire. Formé en 1965 à Londres, il est reconnu pour sa musique planante et expérimentale, ses textes philosophiques et satiriques, ses albums-concept et ses performances en concert originales et élaborées. De ses débuts à aujourd'hui, le groupe a vendu près de trois cents millions d'albums à travers le monde. Il était composé des membres suivants :
+					</div>
+					<br/>
+					<div class="alert alert-warning">
+						<strong>Astuce :</strong> Cliquez sur les rangées pour afficher plus de détails.
+					</div>
+					<br/>
+					<!-- "Hover" pour indiquer que les rangées sont cliquables. "Striped" parce que l'entête et les rangées développables ne changent pas de couleur quand on les survoles, la couleur des rayures claires et celle des rangées survolées étant la même.  -->
+					<table class="table table-hover table-striped">
+						<tr>
+							<th class="col-lg-2 col-md-2 col-sm-2 col-xs-2">Membre</th>
+							<th class="col-lg-5 col-md-5 col-sm-5 col-xs-5">Nom</th>
+							<th class="col-lg-5 col-md-5 col-sm-5 col-xs-5">Rôle</th>
+						</tr>
+						<!-- quand je clique sur cette rangée... -->
+						<tr data-toggle="collapse" data-target=".sbarrett">
+							<td>
+								<img src="../images/rock_sbarrett.jpg" class="rockface"/>
+							</td>
+							<td>Syd Barrett</td>
+							<td>Guitariste, chanteur</td>
+						</tr>
+						<!-- ...je veux que cette rangée-ci se développe. -->
+						<tr class="sbarrett collapse">
+							<td colspan="3">
+								<!-- j'englobe le texte avec une div qui a la même classe que le tr au dessus, pour que le collapse l'affecte aussi car l'animation ne fonctionne pas sur la balise tr. Et donner à cette div la classe collapse directement laissait un espace vide dans le tableau... -->
+								<div class="sbarrett">
+									Entre 1965 et 1968, Syd Barrett enregistre quatre singles et un album, 
+									<span class="quotation">The Piper at the Gates of Dawn</span>, avec Pink Floyd. Chanteur et guitariste, il est également le principal compositeur du groupe. Son comportement de plus en plus erratique, principalement dû à son importante consommation de LSD, entraîne son exclusion au début de l'année 1968, pendant l'enregistrement du deuxième album de Pink Floyd, 
+									<span class="quotation">A Saucerful of Secrets</span>.
+
+									<!-- bouton pour renvelopper la rangée. À l'intérieur du div comme ça le bouton ne se montre que quand la rangée est développée  -->
+									<center><button type="button" class="btn btn-danger btn-xs" data-toggle="collapse" data-target=".sbarrett"><span class="glyphicon glyphicon-remove"></span>
+									</button></center>
+								</div>
+							</td>
+						</tr>
+						<!-- quand je clique sur cette rangée... -->
+						<tr data-toggle="collapse" data-target=".rwaters">
+							<td>
+								<img src="../images/rock_rwaters.jpg" class="rockface"/>
+							</td>
+							<td>Roger Waters</td>
+							<td>Bassiste, chanteur</td>
+						</tr>
+						<!-- ...je veux que cette rangée-ci se développe. -->
+						<tr class="rwaters collapse">
+							<td colspan="3">
+								<!-- on englobe le texte avec un div qui a la même classe que le tr au dessus, pour que le collapse l'affecte aussi car l'animation ne fonctionne pas sur la balise tr. Et donner à ce div la classe collapse directement laissait un espace vide dans le tableau... -->
+								<div class="rwaters">
+									Son père, Eric Fletcher Waters, participe aux combats de la Seconde Guerre mondiale et est tué à Anzio, en 1944, au cours de l'Opération Shingle. Le traumatisme lié à la mort de son père marquera durablement ses compositions, en particulier sur les albums 
+									<span class="quotation">The Wall</span> (1979), 
+									<span class="quotation">The Final Cut</span> (1983) – qui lui est d'ailleurs dédié – et 
+									<span class="quotation">Amused to Death</span> (1992).
+									<!-- bouton pour renvelopper la rangée. À l'intérieur du div comme ça le bouton ne se montre que quand la rangée est développée  -->
+									<center><button type="button" class="btn btn-danger btn-xs" data-toggle="collapse" data-target=".rwaters"><span class="glyphicon glyphicon-remove"></span>
+									</button></center>
+								</div>
+							</td>
+						</tr>
+						<tr data-toggle="collapse" data-target=".rwright">
+							<td>
+								<img src="../images/rock_rwright.jpg" class="rockface"/>
+							</td>
+							<td>Richard Wright</td>
+							<td>Claviériste</td>
+						</tr>
+						<tr class="rwright collapse">
+							<td colspan="3">
+								<div class="rwright">
+									Il jouait un rôle discret mais indispensable dans l'élaboration du son particulier du groupe. Il a participé à l'enregistrement de tous les albums de Pink Floyd sauf un 
+									<span class="quotation">The Final Cut</span>, ainsi qu'à toutes ses tournées.
+									<center><button type="button" class="btn btn-danger btn-xs" data-toggle="collapse" data-target=".rwright"><span class="glyphicon glyphicon-remove"></span>
+									</button></center>
+								</div>
+							</td>
+						</tr>
+						<tr data-toggle="collapse" data-target=".dgilmour">
+							<td>
+								<img src="../images/rock_dgilmour.jpg" class="rockface"/>
+							</td>
+							<td>David Gilmour</td>
+							<td>Guitariste, chanteur</td>
+						</tr>
+						<tr class="dgilmour collapse">
+							<td colspan="3">
+								<div class="dgilmour">
+									David Gilmour rejoint le groupe Pink Floyd à la demande de Nick Mason le batteur, en janvier 1968, afin d'épauler sur scène Syd Barrett, un ami d'enfance avec qui il a commencé à jouer de la guitare et dont le comportement devient de plus en plus erratique. En avril 1968, David Gilmour remplace définitivement Syd Barrett qui, victime de troubles mentaux, est devenu incapable de jouer et de suivre le groupe.
+									<center><button type="button" class="btn btn-danger btn-xs" data-toggle="collapse" data-target=".dgilmour"><span class="glyphicon glyphicon-remove"></span>
+									</button></center>
+								</div>
+							</td>
+						</tr>
+						<tr data-toggle="collapse" data-target=".nmason">
+							<td>
+								<img src="../images/rock_nmason.jpg" class="rockface"/>
+							</td>
+							<td>Nick Mason</td>
+							<td>Batteur</td>
+						</tr>
+						<tr class="nmason collapse">
+							<td colspan="3">
+								<div class="nmason">
+									Musicien le moins connu du groupe, Mason a néanmoins apporté beaucoup en termes de percussions et était, avec Waters, l'homme du triturage et du bidouillage des sons et des effets spéciaux. Il est le seul membre de Pink Floyd à avoir toujours été présent dans le groupe.
+									<center><button type="button" class="btn btn-danger btn-xs" data-toggle="collapse" data-target=".nmason"><span class="glyphicon glyphicon-remove"></span>
+									</button></center>
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+					<br/>
+				<!-- Côte à côte en lg et en md, puis tout superposé en sm et en xs -->
+				<div class="col-lg-5 col-lg-offset-2 col-md-6 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
+					<img class="col-lg-12 col-md-12 col-sm-12 col-xs-12" src="../images/Logo_Queen.png"/>
+					<div>
+						Considéré comme l'un des plus grands groupes de rock britannique à succès depuis 1970, Queen a lui aussi vendu plus de 300 millions d'albums à l'échelle internationale. Selon un sondage mené en Grande-Bretagne en 2007, ce groupe est considéré comme étant le « meilleur groupe britannique de tous les temps ». Queen est aussi l'un des pionniers du clip vidéo, ayant exploité ce mode de communication dès 1975. Queen a conservé, après la mort de son leader Freddie Mercury en 1991, de très nombreux admirateurs inconditionnels dans le monde entier.
+					</div>
+					<br/>
+					<br/>
+					<!-- même structure que le tableau précédent -->
+					<table class="table table-striped table-hover">
+						<tr>
+							<th class="col-lg-2 col-md-2 col-sm-2 col-xs-2">Membre</th>
+							<th class="col-lg-5 col-md-5 col-sm-5 col-xs-5">Nom</th>
+							<th class="col-lg-5 col-md-5 col-sm-5 col-xs-5">Rôle</th>
+						</tr>
+						<tr data-toggle="collapse" data-target=".fmercury">
+							<td>
+								<img src="../images/rock_fmercury.jpg" class="rockface"/>
+							</td>
+							<td>Freddie Mercury</td>
+							<td>Chanteur</td>
+						</tr>
+						<tr class="fmercury collapse">
+							<td colspan="3">
+								<div class="fmercury">
+									Avec une grande tessiture et une bonne maîtrise de quelques techniques d'opéra, il demeure parmi les plus grands chanteurs du XXe siècle, l'un des plus populaires et des plus techniquement accomplis. Il a été élu « Ultime Dieu du Rock » dans un sondage, sur une liste des 4 000 plus grandes figures du rock, devançant Elvis Presley de quelques voix. Sa performance avec le groupe Queen au Live Aid a été élu « meilleure performance live de tous les temps ». Il a composé avec Queen la plupart de ses grands succès, dont 
+									<span class="quotation">Bohemian Rhapsody</span>, 
+									<span class="quotation">Somebody to Love</span>, 
+									<span class="quotation">We Are the Champions</span>, 
+									<span class="quotation">Don't Stop Me Now et Crazy Little Thing Called Love</span>.
+									<center><button type="button" class="btn btn-danger btn-xs" data-toggle="collapse" data-target=".fmercury"><span class="glyphicon glyphicon-remove"></span>
+									</button></center>
+								</div>
+							</td>
+						</tr>
+						<tr data-toggle="collapse" data-target=".bmay">
+							<td>
+								<img src="../images/rock_bmay.jpg" class="rockface"/>
+							</td>
+							<td>Brian May</td>
+							<td>Guitariste</td>
+						</tr>
+						<tr class="bmay collapse">
+							<td colspan="3">
+								<div class="bmay">
+									Il compose beaucoup de succès de Queen (
+									<span class="quotation">We Will Rock You</span>, 
+									<span class="quotation">I Want It All, Save Me</span>, 
+									<span class="quotation">Who Wants to Live Forever</span>, 
+									<span class="quotation">Tie Your Mother Down</span>, 
+									<span class="quotation">Hammer to Fall</span>, 
+									<span class="quotation">White Queen (As it Began)</span>, 
+									<span class="quotation">The Show Must Go On</span>, 
+									<span class="quotation">Now I'm Here</span>, ou encore 
+									<span class="quotation">No-One but You</span>). Il utilise une guitare électrique qu'il a fabriquée lui-même, appelée 
+									<span class="quotation">Red Special</span>.
+									<center><button type="button" class="btn btn-danger btn-xs" data-toggle="collapse" data-target=".bmay"><span class="glyphicon glyphicon-remove"></span>
+									</button></center>
+								</div>
+							</td>
+						</tr>
+						<tr data-toggle="collapse" data-target=".jdeacon">
+							<td>
+								<img src="../images/rock_jdeacon.jpg" class="rockface"/>
+							</td>
+							<td>John Deacon</td>
+							<td>Bassiste</td>
+						</tr>
+						<tr class="jdeacon collapse">
+							<td colspan="3">
+								<div class="jdeacon">
+									Il est l'auteur des hits 
+									<span class="quotation">You're My Best Friend</span>, 
+									<span class="quotation">I Want to Break Free</span>, ainsi que 
+									<span class="quotation">Another One Bites The Dust</span> (meilleure vente de single de Queen aux États-Unis), 
+									<span class="quotation">Spread Your Wings</span> ou encore 
+									<span class="quotation">Back Chat</span>. Il est également l'inventeur du 
+									<span class="quotation">Deacy Amp</span>. Des quatre membres du groupe, il fut le dernier à y adhérer mais aussi le plus jeune ; il avait seulement 19 ans quand il les rejoignit.
+									<center><button type="button" class="btn btn-danger btn-xs" data-toggle="collapse" data-target=".jdeacon"><span class="glyphicon glyphicon-remove"></span>
+									</button></center>
+								</div>
+							</td>
+						</tr>
+						<tr data-toggle="collapse" data-target=".rtaylor">
+							<td>
+								<img src="../images/rock_rtaylor.jpeg" class="rockface"/>
+							</td>
+							<td>Roger Taylor</td>
+							<td>Batteur</td>
+						</tr>
+						<tr class="rtaylor collapse">
+							<td colspan="3">
+								<div class="rtaylor">
+									Un peu en retrait par rapport à Freddie Mercury et Brian May, Roger Taylor n'en demeure pas moins un des facteurs importants dans la constitution du "son Queen", à la fois ample et sophistiqué. Il a écrit au moins une chanson sur chaque album de Queen. Il a également écrit quatre des hits du groupe : 
+									<span class="quotation">Radio Ga Ga</span>, 
+									<span class="quotation">A Kind of Magic</span>, 
+									<span class="quotation">The Invisible Man</span>, 
+									<span class="quotation">These Are the Days of Our Lives</span>, 
+									<span class="quotation">Breakthru</span> et 
+									<span class="quotation">Heaven for Everyone</span>.
+									<center><button type="button" class="btn btn-danger btn-xs" data-toggle="collapse" data-target=".rtaylor"><span class="glyphicon glyphicon-remove"></span>
+									</button></center>
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+		<!-- Pied de page bleu foncé fixé en bas d'écran -->
+		<footer>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 label label-primary label-footer">
+				<span class="glyphicon glyphicon-copyright-mark"></span> 2018 Emin et Pauline 
+				<br/>Tous droits réservés aux créateurs originels.
+			</div>
+		</footer>
+	</body>
+	<!--Bootstrap -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="../bootstrap/js/bootstrap.js"></script>
+</html>

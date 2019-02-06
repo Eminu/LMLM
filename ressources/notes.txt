@@ -1,0 +1,7 @@
+-col-md nécessaire? A été rajouté dans les pages d'Emin...
+-problème d'alignement des images-frise en écran étroit
+-Vérifier que rien n'a été oublié dans les modifications apportées par monsieur.
+
+
+-faire en sorte qu'en cliquant sur les images de la frises de Kpop, on ait quelque chose qui se déroule concernant le groupe?
+-trouver d'autres améliorations à faire sur le site.

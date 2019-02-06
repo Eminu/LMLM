@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>La musique ou la mort - Forum</title>
+		<link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
+		<link rel="stylesheet" href="../page_de_style.css" type="text/css"/>
+		
+		<script>
+		function resultat() {
+			if (question1==1) { reponse1="juste";}
+			else {reponse1="fausse. Bonne réponse: La Grande Bretagne.";}
+			
+			if (question2==1) { reponse2="juste";}
+			else {reponse2="fausse. Bonne réponse: un cheval aquatique.";}
+			
+			if (question4==1) { reponse4="juste";}
+			else {reponse4="fausse. Bonne réponse: John Deacon.";}
+
+			if (question7==1) { reponse7="juste";}
+			else {reponse7="fausse. Bonne réponse: Vrai.";}
+			
+			alert("Réponse au questionnaire:\n\nLa première réponse est "+reponse1+"\nLa deuxième réponse est "+reponse2+"\nLa quatrième réponse est "+reponse4+"\nLa septième réponse est "+reponse7+"\nBonus: toutes les réponses à la question 6 sont bonnes!");
+			document.getElementById("correct1").style.visibility= "visible";
+			document.getElementById("correct2").style.visibility= "visible";
+			document.getElementById("correct3").style.visibility= "visible";
+			document.getElementById("correct4").style.visibility= "visible";
+			document.getElementById("correct5").style.visibility= "visible";
+			document.getElementById("correct6").style.visibility= "visible";
+			document.getElementById("correct7").style.visibility= "visible";
+		}
+		function CacheMisere() {
+			document.getElementById("correct1").style.visibility= "hidden";
+			document.getElementById("correct2").style.visibility= "hidden";
+			document.getElementById("correct3").style.visibility= "hidden";
+			document.getElementById("correct4").style.visibility= "hidden";
+			document.getElementById("correct5").style.visibility= "hidden";
+			document.getElementById("correct6").style.visibility= "hidden";
+			document.getElementById("correct7").style.visibility= "hidden";
+		}		
+		</script>
+	</head>
+	
+	<body onLoad="question1=0; question2=0 ; question4=0; question7=0; correction.Visibility=false">
+		<!-- Barre de navigation -->
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+				<div class="navbar-header">
+					<!-- Menu déroulant sur petit écran -->
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<!-- Logo du site -->
+					<a class="navbar-brand" href="../index.html">
+						<strong><span class="glyphicon glyphicon-equalizer"></span> LM²</strong>
+					</a>
+				</div>
+				<!-- Contenu de la barre de navigation -->
+				<div id="navbar" class="collapse navbar-collapse">
+					<!-- Affichage des pages: liste de navigation -->
+					<ul class="nav navbar-nav">
+						<!-- Page active mise en évidence -->
+						<li>
+							<a class="fusion" href="../index.html" title="La Musique ou La Mort">Index</a>
+						</li>
+						<li>
+							<a class="fusion" href="k-pop.html" title="Les sourds précoces">K-Pop</a>
+						</li>
+						<li>
+							<a class="fusion" href="rock.html" title="je suis un homme simple">Rock</a>
+						</li>
+						<li>
+							<a class="fusion" href="classique.html" title="Un peu d'archéologie">Classique</a>
+						</li>
+						<li>
+						<a class="fusion" href="celtique.html" title="Pendant ce temps, de l'autre côté de la Manche...">Celtique</a>
+						</li>
+						<li>
+							<a class="fusion" href="jazz.html" title="Un petit coup de trompette?">Jazz</a>
+						</li>
+						<li>
+							<a class="fusion" href="melanges.html" title="Pour ceux qui n'aiment pas les étiquettes">Fusions</a>
+						</li>
+						<!-- lien correspondant à la page visualisée -->
+						<li class="active">
+							<a href="#" title="À votre tour">Forum</a>
+						</li>
+					</ul>
+					<!-- Zone de recherche linéaire décalée sur la droite -->
+					<form class="navbar-form navbar-right form-inline">
+						<div class="form-group">
+							<!-- barre de recherche -->
+							<input type="search" class="input-sm form-control Taille-controle" placeholder="Recherche">
+							<!-- Bouton de recherche -->
+							<button type="submit" class="btn btn-info btn-sm">
+								<span class="glyphicon glyphicon-music"></span> 
+								<span id="BTNrecherche">Chercher</span>
+							</button>
+						</div>
+					</form>
+				</div>
+		</nav>
+		<!--Contenu de la page -->
+		<div class="container page">
+			<center><h1>Place aux questions!</h1>
+			<p>Cliquez sur les thèmes ci-dessous pour donner place aux questions.</p></center>
+			<br/>
+			<ul class="panel-group">
+				<!-- quand je clique sur ce panel... -->
+				<a data-toggle="collapse" href="#T1">
+					<!-- Liste permettant d'afficher les points sur le côté gauche -->
+					<li class="alert alert-success">
+						Thème 1: La musique
+					</li>
+				</a>
+				<!-- ...ce groupe de panel se développe. -->
+				<div class="panel panel-success panel-collapse collapse" id="T1">
+					<div class="panel-heading">
+						Quels-sont vos genres de musique préférés?
+					</div>
+					<div class="panel-body forum-reponse">
+						Excellente question. Alors voyons voir... Déjà il y a le Rock, ça c'est classique... Ah d'ailleurs on aime bien la musique classique aussi. Et, euh... J'allais dire K-Pop aussi, mais en fait on aime pas la K-Pop.
+					</div>
+					<div class="panel-heading">
+						Quels-sont les genres de musique que vous détestez le plus?
+					</div>
+					<div class="panel-body forum-reponse">
+						K-Pop. K-Pop. K-Pop. K-Pop. K-Pop. K-Pop. K-Pop. K-Pop. K-Pop. K-Pop. K-Pop. K-Pop. K-Pop. 
+					</div>
+				</div>
+				<br/>
+				<!-- quand je clique sur ce panel... -->
+				<a data-toggle="collapse" href="#T2">
+					<li class="alert alert-warning">
+						Thème 2: La mort
+					</li>
+				</a>
+				<!-- ...ce groupe de panel se développe -->
+				<div class="panel panel-warning panel-collapse collapse" id="T2">
+					<div class="panel-heading">
+						Est-ce vraiment possible de mourir d'ennui?
+					</div>
+					<div class="panel-body forum-reponse">
+						Bien sûr que non! Dans une société comme la notre, basée sur la consommation et le divertissement, comment serait-il possible de s'ennuyer en premier lieu? Réfléchissez-y, une infinité de moyens pour battre l'ennui, à la portée de vos doigts! Et puis, vous êtes actuellement sur notre site, donc impossible de s'ennuyer. Bon sang, cette question n'a pas lieu d'être.
+					</div>
+					<div class="panel-heading">
+						Pourquoi vivre quand la mort semble être une solution tellement plus facile à tous mes problèmes?
+					</div>
+					<div class="panel-body forum-reponse">
+						Oula, c'était peut-être pas une si bonne idée ce thème...
+					</div>
+				</div>
+				<br/>
+				<!-- quand je clique sur ce panel... -->
+				<a data-toggle="collapse" href="#T3">
+					<li class="alert alert-danger">
+						Thème 3: Les animaux et la musique
+					</li>
+				</a>
+				<!-- ...ce groupe de panel se développe -->
+				<div class="panel panel-danger panel-collapse collapse" id="T3">
+					<div class="panel-heading">
+						Quel lien entre les chats sans poils et la musique?
+					</div>
+					<div class="panel-body forum-reponse">
+						Enfin une question intéressante! L’apparition des chats sans poils dans le royaume animal est relativement récente. C’est en 1966, il y a plus de 50 ans, que le premier Sphynx a vu le jour au Canada. Les races suivantes viennent au monde environ 20 et 30 plus tard, toutes les deux en Russie. Le Donskoy en 1983 et le Peterbald en 1994. Certains les apprécient, les aiment, d’autres moins, il faut dire que leur apparence ne laisse personne indifférent! Et, vous voyez, c'est exactement la même chose avec la musique! Il y a différents genres de musique, provenant de différents pays. Et là aussi, certaines personnes apprécieront certains genres plus que d'autres, et, à une échelle plus rapprochée, certains groupes de musique.
+					</div>
+					<div class="panel-heading">
+						Les chiens savent-ils vraiment danser ou ne font-ils qu'imiter l'Homme?
+					</div>
+					<div class="panel-body forum-reponse">
+						oui.
+					</div>
+				</div>
+			</ul>
+			
+			<form class="col-lg-offset-2 col-lg-8">
+				<!-- Titre du formulaire -->
+				<legend class="legende">Maintenant, c'est votre tour!</legend>
+				<label>Question 1: Que représente la seule carte du site? </label><br/>
+				<input type="radio" name="carte" value="Quelle carte?"/> Quelle carte?
+				<input type="radio" name="carte" value="Bleu" /> Bleu
+				<input type="radio" name="carte" value="La grande Bretagne" onClick="question1=1"/> La grande Bretagne
+				<input type="radio" name="carte" value="Le Grand Schtroumpf" /> Le Grand Schtroumpf
+				<p id="correct1" style="color: #6DB06E; visibility: hidden;">La réponse était donc "la Grande Bretagne" même si "le Grand Schtroumpf " était plus cool...</p>
+				<label>Question 2: Quel créature imaginaire est citée dans une des chansons de Julie Fowlis? </label><br/>
+				<input type="radio" name="creature" value="Gargamel" /> Gargamel
+				<input type="radio" name="creature" value="un politicien honnête" /> un politicien honnête
+				<input type="radio" name="creature" value="un triton" /> un triton
+				<input type="radio" name="creature" value="un cheval aquatique" onClick="question2=1"/> un cheval aquatique
+				<p id="correct2" style="color: #6DB06E; visibility: hidden;">Il fallait répondre "un politicien honnête". Commment ça non? C'est quand même moins réaliste que le cheval!</p>
+				<label>Question 3: Nommer un des groupes cités sur la page maudite (ne faites pas semblant de ne pas comprendre...). </label><br/>
+				<input type="text" name="malédiction" class="form-control" value="êtes-vous sûr de vouloir répondre?"/>
+				<p id="correct3" style="color: #6DB06E; visibility: hidden;">Les groupes cités dans la page maudite sont: Wonder Girls, Mamamoo, Akmu, BTS, Girls's Generation, Pentagon et Secret.</p>
+				<label>Question 4: Laquelle de ces personnes n'a pas fait partie du groupe Pink Floyd?</label>
+				<select class="form-control">
+					<option>...</option>
+					<option onClick="question4=1">John Deacon</option>
+					<option>Syd Barrett</option>
+					<option>Nick Mason</option>
+					<option>David Gilmour</option>
+				</select>
+				<p id="correct4" style="color: #6DB06E; visibility: hidden;">Au pire, on s'en fiche, vous ne pensez pas? (Deacon, si vous insistez vraiment)</p>
+				<label>Question 5: Les chiens savent-ils vraiment danser ou ne font-ils qu'imiter l'Homme?</label><br/>
+				<textarea id="textarea" class="form-control" name="imitation" class="form-control">On vous renvoie la balle... ou la patate chaude, selon si vous réfléchissez plutôt avec vos muscles ou votre système digestif.</textarea>
+				<p id="correct5" style="color: #6DB06E; visibility: hidden;">Vous aviez vraiment cru qu'on corrigerait ça?</p>
+				<label>Question 6: Quelle est la particularité de Ludwig van Beethoven? <br/>(plusieurs réponses possibles, parce que la logique est morte en lisant ce questionnaire. Paix à son âme.)</label><br/>
+				<input type="checkbox" name="Beethoven" value="Sourd"/>Il était sourd<br/>
+				<input type="checkbox" name="Beethoven" value="Classique"/>Il était un des rares au monde à comprendre quelque chose à la musique<br/>
+				<input type="checkbox" name="Beethoven" value="Mort"/>Il est mort avant la Logique<br/>
+				<p id="correct6" style="color: #6DB06E; visibility: hidden;">Déjà, il était sourd. Ensuite, il comprenait la musique, lui. Et, évidemment, il est mort avant la logique, vu qu'on vient de la tuer. Le reste est faux!</p>
+				<label>Question 7: Une chanteuse néo-zélandaise classique est qualifiée pour chanter des chansons traditionnelles irlandaises dès le moment où elle met les pieds dans le bon pays.</label><br/>
+				<input type="radio" name="qualification" value="vrai" onClick="question7=1" /> Vrai
+				<input type="radio" name="qualification" value="faux" /> Faux
+				<p id="correct7" style="color: #6DB06E; visibility: hidden;">Vous avait-on parlé de ce qui était arrivé à la logique? Non, parce que l'impact est direct ici: cette affirmation est vraie. La preuve est cachée dans la page celtique.</p>
+				<!-- Bouton bleu foncé effaçant les données -->
+				<input type="reset" value="Effacer les réponses" class="btn btn-primary" onClick="CacheMisere()">
+				<!-- Bouton bleu foncé renvoyant à la page active -->
+				<input type="button" value="valider" class="btn btn-primary" onClick="resultat()"/>
+			</form>
+		</div>
+		<!-- Pied de page bleu foncé fixé en bas d'écran -->
+		<footer>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 label label-primary label-footer">
+				<span class="glyphicon glyphicon-copyright-mark"></span> 2018 Emin et Pauline 
+				<br/>Tous droits réservés aux créateurs originels.
+			</div>
+		</footer>
+	</body>
+	<!--Bootstrap -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="../bootstrap/js/bootstrap.js"></script>
+</html>
