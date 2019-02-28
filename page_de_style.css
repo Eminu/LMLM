@@ -608,7 +608,7 @@ footer {
 .mel-instr-mob2::after {
 	content: "doigt";
 }
-@media (hover) /*l'appareil est-il capable de survoler? (=est-il un ordi?)*/ or (min-width: 768px){
+@media (hover), (min-width:768px){
 	.mel-instr-mob1::after {
 	content: "Survolez";
 	}
