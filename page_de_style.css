@@ -65,8 +65,11 @@ footer {
 }
 
 .navbar-form {
+	/* on neutralise quelques règles régies par bootstrap qui sont embêtantes pour les différentes résolutions d'écran */
 	margin-right: 0 !important;
+	padding-left: 0 !important;
 }
+
 
 	.navbar-inverse .navbar-brand{
 		color: #8acafa;
@@ -86,16 +89,22 @@ footer {
 		background-color: #001050;
 	}
 
-@media (max-width:935px){
+@media (min-width:768px) and (max-width:958px){
 	#BTNrecherche{
 		display: none;
 	}
 
 	.Taille-controle{
-		max-width: 60px !important;
+		padding: 0 2px;
+		text-overflow: ellipsis;
+		max-width: 52px !important;
 	}
 }
-	
+@media (max-width:768px) {
+	.Taille-controle{
+			margin-left: 8px;
+		}
+}
 .intro {
 	background-color: #444444;
 }
@@ -151,7 +160,7 @@ footer {
 	justify-content: space-between;
 	flex-wrap: wrap; 
 }
-	@media (min-width: 992px){
+	@media (min-width: 1100px){
 		#conteneur {
 			flex-wrap: nowrap !important;
 		}
@@ -159,7 +168,7 @@ footer {
 
 
 .element {
-	margin: 1%;
+	margin: 2px;
 }
 
 .dropdown {
@@ -169,6 +178,7 @@ footer {
 	max-width: 300px;
 }
 	.dropdown>.panel-heading::first-letter {font-size:xx-large;}
+	
 	
 	.dropdown-content {
 		display: none;
@@ -185,9 +195,11 @@ footer {
 			min-width: 200px;
 			max-width: 260px;
 			}
-				.dropdown-content {
-					min-width: 240px;
-				}
+			.dropdown>.panel-heading::first-letter {font-size:x-large;}
+			
+			.dropdown-content {
+				min-width: 240px;
+			}
 		}
 	
 	.dropdown:hover .dropdown-content {
@@ -229,7 +241,7 @@ footer {
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 270px;
-	opacity: 0.7;
+	opacity: 0.75;
 	position: relative;
 	margin-top: 5%; 
 	margin-bottom: 2%;
@@ -239,10 +251,10 @@ footer {
 
 	.JF-text {
 		position: absolute ;
-		opacity: 1;
 		color: white;
 		text-align: justify;
 		margin: 10px 50px;
+		text-shadow: 0px 0px 3px black;
 	}
 
 	@media (min-width: 480px){
@@ -251,7 +263,7 @@ footer {
 			margin-right: -60px;
 		}
 		.JF-text {
-			margin: 100px 100px;
+			margin: 60px 60px;
 		}
 	}
 
@@ -268,6 +280,7 @@ footer {
 }
 
 #ZooAnim {
+	max-width: 100%;
 	position: relative;
 	animation-name: Zoo;
     animation-duration: 3s;
@@ -333,16 +346,27 @@ footer {
 	font-size:11px;
 	font-weight:bold;
 	width: 95%;
+	max-width: 950px;
 	margin: auto;
-	overflow: hidden;
-	border-left: solid 5px #6aaaea;
-	border-right: solid 5px #6aaaea;
+	overflow:scroll hidden;
+	border-left: solid 5px #5bc0de;
+	border-right: solid 5px #5bc0de;
 	border-radius: 6px;
-	transition: width .2s ease-in-out;
+	transition: .2s ease-in-out;
+	-webkit-overflow-scrolling: touch; /* fonctionne sur Safari iOS seulement, simule l'inertie */
+	/* ces deux règles pour firefox seulement, qui ne supporte pas les ::-webkit-scrollbar en dessous */
+	scrollbar-width: thin; 
+	scrollbar-color: #5bc0de #444444;
+}
+
+#mel-scroll-mobile {
+	overflow: hidden;
+	width: 1128px;
 }
 
 	#mel-scroll-container:hover {
 		width: 100%;
+		max-width: 970px;
 	}	
 	
 .mel-scroll-help {
@@ -363,14 +387,19 @@ footer {
     position: relative;
     animation: melanim 10s infinite;
 	animation-timing-function: linear;
-	transition: width .3s, border-radius 2s;	
+	transition: width .3s;
+	-webkit-overflow-scrolling: touch;
+	scrollbar-width: thin;
+	scrollbar-color: #5bc0de #444444;
 }
 	.mel-scroll:hover {
 		overflow-y: scroll;
 		margin-bottom: auto;
 		width: 200px;
-		border: 1px solid white;
+		border: 1px solid #444444;
+		border-right: hidden;
 		border-radius: 6px;
+		box-shadow: 0px 0px 10px 8px black inset;
 	}
 
 @media (min-width: 768px){
@@ -386,20 +415,25 @@ footer {
 		position: relative;
 		animation: melanim 6s infinite;
 		animation-timing-function: linear;
-		transition: width .3s, border-radius 2s;	
+		transition: width .3s;
+		-webkit-overflow-scrolling: touch;
+		scrollbar-width: thin;
+		scrollbar-color: #5bc0de #444444;
 	}
-		.mel-scroll:hover {
+	.mel-scroll:hover {
 		overflow-y: scroll;
 		margin-bottom: auto;
 		width: 250px;
-		border: 1px solid white;
+		border-top: 1px solid #444444;
+		border-right: hidden;
 		border-radius: 6px;
+		box-shadow: 0px 0px 10px 8px black inset;
 	}
 }
 
 	.mel-scroll > img {
 		display:block;
-		border-radius: 4px;
+		border-radius: 6px;
 		max-width: 180px;
 		padding-right: 4px;
 	}
@@ -409,29 +443,26 @@ footer {
 	}
 
 .mel-scroll-content {
-	background-color: rgba(0, 0, 0, 1);
+	background-color: rgba(0, 0, 0, 0.8);
 	display: none;
 	min-height: 180px;
 	padding: 10px;
-	transition: background-color 1s linear; /*marche pas*/
 }
 
 	.mel-scroll:hover > .mel-scroll-content {
-		background-color: rgba(0, 0, 0, 0.7);
 		display: block;
 	}
 
-	#mel-scroll-container:hover > .mel-scroll-help > .mel-scroll {
+	#mel-scroll-container:hover > #mel-scroll-mobile > .mel-scroll-help > .mel-scroll {
 		animation-play-state: paused;
 	}
-
 
 	@keyframes melanim {
 		from {right: 0px;}
 		to {right: 1128px;}
 	}
 	
-	/* oui je refais une autre class completement differente pour la page celtique plutot que de réutiliser .mel-scroll, je voulais faire des keyframes dynamiques mais c'etait hyper galere :( */
+/* je refais une autre class completement differente pour la page celtique plutot que de réutiliser .mel-scroll, je voulais faire des keyframes dynamiques (avec du js) mais c'etait hyper galere :( */
 
 .celt-scroll {
 	text-align: justify;
@@ -445,15 +476,19 @@ footer {
     position: relative;
     animation: celtanim 16s infinite;
 	animation-timing-function: linear;
-	transition: width .3s, border-radius 2s;	
+	transition: width .3s;
+	-webkit-overflow-scrolling: touch;
+	scrollbar-width: thin;
+	scrollbar-color: #5bc0de #444444;
 }
 
 	.celt-scroll:hover {
 		overflow-y: scroll;
 		margin-bottom: auto;
 		width: 200px;
-		border: 1px solid white;
+		border: 1px solid #444444;
 		border-radius: 6px;
+		box-shadow: 0px 0px 10px 8px black inset;
 	}	
 
 @media (min-width: 768px){
@@ -469,22 +504,25 @@ footer {
     position: relative;
     animation: celtanim 12s infinite;
 	animation-timing-function: linear;
-	transition: width .3s, border-radius 2s;	
+	transition: width .3s;
+	-webkit-overflow-scrolling: touch;
+	scrollbar-width: thin;
+	scrollbar-color: #5bc0de #444444;
 }
 
 	.celt-scroll:hover {
 		overflow-y: scroll;
 		margin-bottom: auto;
 		width: 250px;
-		border: 1px solid white;
+		border: 1px solid #444444;
 		border-radius: 6px;
+		box-shadow: 0px 0px 10px 8px black inset;
 	}
 }
 
-
 	.celt-scroll > img {
 		display:block;
-		border-radius: 4px;
+		border-radius: 6px;
 		max-width: 180px;
 		padding-right: 4px;
 	}
@@ -494,18 +532,69 @@ footer {
 	}
 
 	.celt-scroll:hover > .mel-scroll-content {
-		background-color: rgba(0, 0, 0, 0.7);
+		background-color: rgba(0, 0, 0, 0.8);
 		display: block;
 	}
 
-	#mel-scroll-container:hover > .mel-scroll-help > .celt-scroll {
+	#mel-scroll-container:hover > #celt-scroll-mobile >.mel-scroll-help > .celt-scroll {
 		animation-play-state: paused;
 	}
+
+/* les modifications portées sur les scrollbars ne fonctionneront qu'avec certains navigateurs (Chrome, Opera) */
+#mel-scroll-container::-webkit-scrollbar {
+	height: 7px;
+}
+#mel-scroll-container:hover::-webkit-scrollbar {
+	height: 11px;
+}
+
+#mel-scroll-container::-webkit-scrollbar-track {
+	background: #444444;
+	margin: 0 10px 1px;
+	border-radius: 5px;
+}
+
+#mel-scroll-container::-webkit-scrollbar-thumb {
+	background: #5bc0de;
+	border-radius: 5px;
+}
+
+.mel-scroll::-webkit-scrollbar, .celt-scroll::-webkit-scrollbar {
+	width: 7px;
+	background-color: rgba(0,  0,  0,  0.7);
+	border-radius: 0 5px 5px 0;
+}
+
+.mel-scroll::-webkit-scrollbar-track, .celt-scroll::-webkit-scrollbar-track {
+	background: #444444;
+	border-radius: 0 5px 5px 0;
+}
+
+.mel-scroll::-webkit-scrollbar-thumb, .celt-scroll::-webkit-scrollbar-thumb {
+	background: #5bc0de;
+	border-radius: 0 5px 5px 0;
+}
+	
+#mel-scroll-container::-webkit-scrollbar-thumb:hover, .mel-scroll::-webkit-scrollbar-thumb:hover, .celt-scroll::-webkit-scrollbar-thumb:hover {
+	background: #9de9ff;
+	box-shadow: 0px 0px 6px 1px black;
+}
+
+	
+#mel-scroll-container::-webkit-scrollbar-thumb:active, .mel-scroll::-webkit-scrollbar-thumb:active, .celt-scroll::-webkit-scrollbar-thumb:active {
+	background: #337ab7;
+	box-shadow: 1px 1px 4px black inset;
+}
 
 	@keyframes celtanim {
 		from {right: 0px;}
 		to {right: 2444px;}
 	}
+	
+#celt-scroll-mobile {
+	overflow: hidden;
+	width: 2444px;
+}
 	
 #mel1:hover, #mel1b:hover {
 	background: no-repeat url("images/thumbnail_jazz_fusion.png") center;
@@ -592,7 +681,7 @@ margin-left:-150px;
 width:300px;
 height:300px;
 border-radius:150px;
-background-color:rgba(255,255,200,0.1);
+background-color:rgba(255,255,100,0.1);
 animation: d 10s infinite linear;
 animation-direction: alternate-reverse;
 }
@@ -605,7 +694,7 @@ animation-direction: alternate-reverse;
 	width:300px;
 	height:300px;
 	border-radius:150px;
-	background-color:rgba(255,255,200,0.1);
+	background-color:rgba(255,255,100,0.1);
 	animation: d2 10s infinite linear;
 	animation-direction: alternate-reverse;
 }
@@ -625,7 +714,7 @@ animation-direction: alternate-reverse;
 	75% {left:0%;top:12%}
 	100% {left:-50%;top:2%}
 }
-@media (min-width:768px) {
+@media (min-width:1200px) {
 #disco {
 	z-index:1;
 	pointer-events: none;
@@ -634,7 +723,7 @@ animation-direction: alternate-reverse;
 	width:600px;
 	height:600px;
 	border-radius:300px;
-	background-color:rgba(255,255,200,0.1);
+	background-color:rgba(255,255,100,0.1);
 	animation: d 15s infinite linear;
 	animation-direction: alternate-reverse;
 }
@@ -647,7 +736,7 @@ animation-direction: alternate-reverse;
 	width:600px;
 	height:600px;
 	border-radius:300px;
-	background-color:rgba(255,255,200,0.1);
+	background-color:rgba(255,255,100,0.1);
 	animation: d2 15s infinite linear;
 	animation-direction: alternate-reverse;
 }

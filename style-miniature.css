@@ -82,11 +82,13 @@ footer {
 	}
 
 .btn-blue{
+	margin: 0 9px 18px;
 	background-color: #0468af;
 	color: white;
+	font-size:16px;
 	font-weight: bold;
-	min-width: 200px;
-}
+	min-width: 80px;
+	}
 	a.btn-blue:hover {
 	background-color: #034a7d ;
 	color: white;
@@ -94,11 +96,12 @@ footer {
 
 	@media (min-width: 992px){
 		.btn-blue {
-			min-with: 80px;
+			min-width: 120px;
 		}
 	}
 
 .imageRonde {
+	margin: 8px;
 	padding:0px;
 	border-radius: 4px;
 	box-shadow: 10px -15px 10px rgba(48, 48, 48);
