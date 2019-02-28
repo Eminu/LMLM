@@ -585,7 +585,6 @@ footer {
 	box-shadow: 0px 0px 6px 1px black;
 }
 
-	
 #mel-scroll-container::-webkit-scrollbar-thumb:active, .mel-scroll::-webkit-scrollbar-thumb:active, .celt-scroll::-webkit-scrollbar-thumb:active {
 	background: #337ab7;
 	box-shadow: 1px 1px 4px black inset;
@@ -600,7 +599,25 @@ footer {
 	overflow: hidden;
 	width: 2444px;
 }
-	
+
+.mel-instr-mob1::after {
+	content: "Touchez";
+}
+
+@media (hover) /*l'appareil est-il capable de survoler? (=est-il un ordi?)*/{
+	.mel-instr-mob1::after {
+	content: "Survolez";
+}
+
+.mel-instr-mob2::after {
+	content: "doigt";
+}
+
+@media (hover){
+	.mel-instr-mob2::after {
+	content: "souris";
+}
+
 #mel1:hover, #mel1b:hover {
 	background: no-repeat url("images/thumbnail_jazz_fusion.png") center;
 }
