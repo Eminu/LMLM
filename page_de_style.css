@@ -600,23 +600,24 @@ footer {
 	width: 2444px;
 }
 
+
 .mel-instr-mob1::after {
 	content: "Touchez";
-}
-
-@media (hover) /*l'appareil est-il capable de survoler? (=est-il un ordi?)*/{
-	.mel-instr-mob1::after {
-	content: "Survolez";
 }
 
 .mel-instr-mob2::after {
 	content: "doigt";
 }
-
-@media (hover){
+@media (hover) /*l'appareil est-il capable de survoler? (=est-il un ordi?)*/ or (min-width: 768px){
+	.mel-instr-mob1::after {
+	content: "Survolez";
+	}
+	
 	.mel-instr-mob2::after {
 	content: "souris";
+	}
 }
+
 
 #mel1:hover, #mel1b:hover {
 	background: no-repeat url("images/thumbnail_jazz_fusion.png") center;
