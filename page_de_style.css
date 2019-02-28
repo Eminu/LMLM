@@ -608,7 +608,9 @@ footer {
 .mel-instr-mob2::after {
 	content: "doigt";
 }
+
 @media (hover), (min-width:768px){
+	/*la caractéristique "hover" vérifie si l'appareil est capable de survol et est donc un ordinateur*/
 	.mel-instr-mob1::after {
 	content: "Survolez";
 	}
@@ -739,48 +741,6 @@ footer {
 	75% {left:0%;top:12%}
 	100% {left:-50%;top:2%}
 }
-@media (min-width:1200px) {
-#disco {
-	z-index:1;
-	pointer-events: none;
-	touch-action: none;
-	position: absolute;
-	margin-left:-300px;
-	width:600px;
-	height:600px;
-	border-radius:300px;
-	background-color:rgba(255,255,100,0.1);
-	animation: d 15s infinite linear;
-	animation-direction: alternate-reverse;
-}
-
-#disco2 {
-	z-index:1;
-	pointer-events: none;
-	touch-action: none;
-	position: absolute;
-	margin-left:-300px;
-	width:600px;
-	height:600px;
-	border-radius:300px;
-	background-color:rgba(255,255,100,0.1);
-	animation: d2 15s infinite linear;
-	animation-direction: alternate-reverse;
-}
-	
-	@keyframes d{
-		0% {left:-100%;top:0}
-		35% {left:0%;top:5%}
-		50% {left:50%;top:15%}
-		65% {left:100%;top:5%}
-		100% {left:200%;top:0}
-	}
-
-	@keyframes d2{
-		0% {left:200%;top:0}
-		35% {left:100%;top:5%}
-		50% {left:50%;top:15%}
-		65% {left:0%;top:5%}
-		100% {left:-100%;top:0}
-	}
+@media (max-width:768px) {
+#disco, #disco2 { display: none; }	
 }
