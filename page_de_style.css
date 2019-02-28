@@ -352,7 +352,8 @@ footer {
 	width: 95%;
 	max-width: 950px;
 	margin: auto;
-	overflow:scroll hidden;
+	overflow-x:scroll;
+	overflow-y:hidden;
 	border-left: solid 5px #5bc0de;
 	border-right: solid 5px #5bc0de;
 	border-radius: 6px;
