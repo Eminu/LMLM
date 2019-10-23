@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="coursePage">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>course de tram!</title>
+		<link href='https://fonts.googleapis.com/css?family=Iceberg' rel='stylesheet'>
+		<link rel="stylesheet" href="../style.css" type="text/css"/>
+		<script type="text/javascript" src="../jquery-3.3.1.js"></script>
+		<script src="../script.js"></script>
+	</head>
+
+	<body onLoad="courseFondSelect();" class="courseBody">
+		<h1><a href="../index.html">Course de tram</a></h1>
+		<div id="courseConteneur">
+			<div id="courseFond"></div>
+			<div id="courseHerbe"></div>
+			<div id="compteChiffre">3</div>
+			<div id="divWinWrap">
+				<div id="divWin">
+					<span id="spanWin1">⤺ Choisissez un tram</span><br>
+					<span id="spanWin2"></span>
+				</div>
+			</div>
+			<div id="courseTramA">
+			<div class="contourTram">
+				<img src="../images/contourTram.gif"/>
+				<img class="iconeTrams" src="../images/icone_A.png" onClick="courseCommence('A');"/>
+			</div>
+			</div>
+			<div id="courseTramB">
+			<div class="contourTram">
+				<img src="../images/contourTram.gif"/>
+				<img class="iconeTrams" src="../images/icone_B.png" onClick="courseCommence('B');"/>
+			</div>
+			</div>
+			<div id="courseTramC">
+			<div class="contourTram">
+				<img src="../images/contourTram.gif"/>
+				<img class="iconeTrams" src="../images/icone_C.png" onClick="courseCommence('C');"/>
+			</div>
+			</div>
+			<img src="../images/ligne_darrivee.png" id="courseLigne"></div>
+		</div>
+	</body>	
+
+</html>
