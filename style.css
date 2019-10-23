@@ -1,0 +1,356 @@
+/* page d'accueil */
+
+.indexPage {
+	color: white;
+	font-family: arial;
+	background: black url("images/fond_index.png") no-repeat fixed right bottom; 
+}
+
+.indexPage body {
+	width: 680px;
+}
+
+.indexPage h1 {
+	font-family: 'Charm';
+	text-shadow: white 0px 0px 2px;
+}
+
+.indexPage a {
+	color: #6E98FF;
+}
+.indexPage a:active {
+	color: white;
+}
+.indexPage a:visited {
+	color: #3B5EC3;
+}
+
+.diapo {
+	background: url(images/velo.jpg);
+	background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 240px;
+    max-width: 700px;
+    position: relative;
+    box-shadow: 3px 3px 5px white;
+}
+
+#HelloWorld {
+	color:#6E98FF;
+	border: dashed;
+}
+
+/* quizz */
+
+.quizzBody {
+	background-image: url('images/fond_quizz.png');
+	font-family: helvetica;
+}
+
+#quizzContainer {
+    padding: 16px;
+    margin: 50px 10px;
+    background-color: rgba(255, 247, 209, 0.49);
+    border: solid #0092ff 4px;
+    overflow: auto;
+    height: 330px;
+    border-radius: 6px;
+}
+
+#A, #B {
+	border: none;
+	cursor: pointer;
+	max-width:360px;
+}
+
+#Corr {
+	color: red;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+}
+
+/* jeu de cartes */
+
+.cartePage {
+	background-image: url('images/fond_bois.png');
+}
+
+.carteBody a {
+	color: #5E3C0A;
+}
+
+.carteBody a:active {
+	color: #FFD291;
+}
+
+.carteBody {
+	font-family: arial;
+	color: #3f3100;
+	padding: 10px 12px;
+	margin: 20px 200px 10px;
+	height: 650px;
+	background-color: rgba(54, 34, 0, 0.3);
+	box-shadow: black inset 0px 0px 20px;
+	border-radius: 2px;
+}
+
+.imgCartes {
+	max-width: 100px;
+}
+
+#Fin {
+    color: #5a005a;
+    font-weight: bold;
+}
+
+#Dos1, #Dos2, #Dos3, #Dos4, #Dos5, #Dos6, #Dos7, #Dos8, #Dos9 {
+	opacity: 1;
+	cursor: pointer;
+}
+
+/* test de personnalite */
+
+.qcmBody {
+	background-image: url('images/fond_test.png');
+	margin: 8px 60px;
+	font-family: arial;
+}
+
+.qcmBody a {
+	color: green;
+}
+
+.qcmBody a:active {
+	color: #89c700;
+}
+
+
+.qcmBody input[type=button] {
+	background-image: linear-gradient(#20C000, #007000);
+	color: white;
+	border: none;
+	border-radius: 2px;
+	padding: 8px;
+}
+
+.qcmBody input[type=button]:enabled:hover {
+	background-image: linear-gradient(#30F000, #007000);
+	cursor: pointer;
+}
+
+.qcmBody input[type=button]:disabled {
+	background-image: none;
+	background-color: #408040;
+}
+
+#qcmFormulaire {
+	min-width: 600px;
+	max-width: 95%;
+	border: solid #007000 2px;
+	border-radius: 6px;
+	padding: 4px 54px 14px;
+	background-color: #fff8c4b3;
+	overflow: auto;
+}
+
+#qcmEnonce {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+#qcmFormulaire span {
+		color: #306030;
+}
+
+#qcmFormulaire #qcmTitre {
+		text-align: center;
+		clear: right;
+}
+
+#qcmFormulaire hr {
+		border-color: #007000 ;
+}
+
+#qcmFormulaire img {
+		margin: 20px;
+		max-width: 300px;
+		float: right;
+}
+
+/* course de tram */
+
+.coursePage {
+	position: relative;
+	overflow: hidden;
+	min-height: 100%;
+	background-image: url('images/fond_mur.jpg');
+}
+
+.courseBody {
+	height: 500px;
+	background-image: radial-gradient(circle,rgba(50,50,50,0.0) 4%,black 70%);
+	margin:0;
+	padding-bottom:50%;
+	padding-top: 30px;
+	color: #e2faff;
+}
+
+.courseBody h1 {
+	text-align:center;
+	font-family: helvetica;
+	font-size: 50px;
+	text-shadow: 0px 0px 4px;
+	margin: 0;
+	animation: titranim linear .15s infinite normal;
+}
+	.courseBody h1 a {
+		color: #e2faff !important;
+
+	}
+
+@keyframes titranim {
+	0% {color: #d8f1f7; text-shadow:0px 0px 2px;}
+	49% {color: #d8f1f7; text-shadow:0px 0px 2px;}
+	50% {color: #e2faff; text-shadow:0px 0px 4px;}
+}
+
+
+#courseConteneur {
+	background-image: linear-gradient(#00a2ff,#cdfaff 70%);
+	box-shadow: black 20px 20px 40px;
+	border-radius: 5px;
+	width: 900px;
+	height: 400px;
+	margin: auto;
+	margin-top: 50px;
+	position: relative;
+	overflow: hidden;
+}
+#courseHerbe {
+	background-image:url(images/herbe.png);
+	background-repeat:repeat-x;
+	position: absolute;
+	left: 0;
+	top: 273px;
+	width: 1060px;
+	height: 300px;
+	z-index: 1;
+}
+
+#courseFond {
+	background-repeat: repeat-x;
+	position: absolute;
+	left: 0;
+	top: 30px;
+	width: 1156px;
+	height: 256px;
+}
+
+#courseLigne {
+	position: absolute;
+	top: 273px;
+	left: 900px;
+	z-index: 2;
+}
+
+#courseTramA {
+	background-image: url('images/tramA.png');
+	width: 1150px;
+	height: 78px;
+	position: absolute;
+	top: 240px;
+	left: -932px;
+	z-index: 3;
+}
+#courseTramB {
+	background-image: url('images/tramB.png');
+	width: 1150px;
+	height: 78px;
+	position: absolute;
+	top: 264px;
+	left: -980px;
+	z-index: 4;
+}
+#courseTramC {
+	background-image: url('images/tramC.png');
+	width: 1150px;
+	height: 78px;
+	position: absolute;
+	top: 288px;
+	left: -1028px;
+	z-index: 5;
+}
+
+#divWinWrap {
+	visibility: visible;
+	position: absolute;
+	top: 120px;
+	left: 245px;
+	border: 1px solid black;
+	border-radius: 6px;
+	color: #ddfa1e;
+	text-shadow: 0px 0px 2px;
+	text-align: center;
+	font-family: 'Iceberg';
+	font-size: 28px;
+	font-weight: bold;
+	background-color: #000040;
+	z-index: 10;
+}
+
+#divWin {
+	border: 4px solid #ACACBD;
+	border-radius: 4px;
+	box-shadow: #ACACBD inset 0px 0px 2px 1px;
+	padding: 10px 20px 14px;
+	filter: brightness(100%);
+}
+
+#spanWin1 {
+	animation: clignote linear 1s infinite normal;
+	font-size: 40px;
+}
+
+#spanWin2 {
+	animation: clignote linear 1s infinite normal;
+}
+
+@keyframes clignote {
+	0% {filter: brightness(50%); text-shadow:none;}
+	49% {filter: brightness(50%);text-shadow:none;}
+	50% {filter: brightness(100%);text-shadow:0px 0px 2px;}
+}
+
+#compteChiffre {
+	background-image: url('images/herisson_compteur.png');
+	font-family: 'Iceberg';
+	font-size: 48px;
+	text-align: center;
+	padding-top: 20px;
+	color: #810000;
+	position: absolute;
+	top: 398px;
+	left: 398px;
+	width: 103px;
+	height: 136px;
+	z-index: 6;
+}
+
+.contourTram {
+	position: relative;
+	left: 905px;
+}
+.contourTram .iconeTrams {
+	cursor: pointer;
+    max-width: 50px;
+    position: relative;
+    left: -60px;
+    top: -100px;
+}
+
+.iconeTrams {
+	max-width: 50px;
+	margin-bottom: -11px;
+}
